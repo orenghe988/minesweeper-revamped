@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="fonts/JosefinSans-VariableFont_wght.ttf" rel="preload" as="font" />
+      <link href="fonts/Lato-Regular.ttf" rel="preload" as="font" />
+      <link href="fonts/Lato-Bold.ttf" rel="preload" as="font" />
+      <link href="fonts.css" rel="stylesheet" />
+      <link href="styles.css" rel="stylesheet" />
+      <script src="main.js" async></script>
+      <title>Minesweeper</title>
+   </head>
+   <body style="visibility: hidden;">
+      <div id="app">
+         <div class="center">
+            <div id="board">
+               <div class="upper-bar">
+                  <div id="flags-remaining-counter">
+                     <div class="number-rect" style="border-top-left-radius: 4px; border-bottom-left-radius: 4px;"><p class="counter-digit">0</p></div>
+                     <div class="number-rect"><p class="counter-digit">0</p></div>
+                     <div class="number-rect" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px;"><p class="counter-digit">0</p></div>
+                     <div class="counter-inner-shadow"></div>
+                  </div>
+                  <div id="game-controls">
+                     <button id="go-back-btn" class="btn btn-square">
+                        <img src="images/back.svg" alt="go back" class="back-icon" />
+                     </button>
+                     <button id="restart-game-btn" class="btn btn-square">
+                        <img src="images/restart.svg" alt="restart game" class="restart-icon" />
+                     </button>
+                  </div>
+                  <div id="time-elapsed-counter">
+                     <div class="number-rect" style="border-top-left-radius: 4px; border-bottom-left-radius: 4px;"><p class="counter-digit">0</p></div>
+                     <div class="number-rect"><p class="counter-digit">0</p></div>
+                     <div class="number-rect" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px;"><p class="counter-digit">0</p></div>
+                     <div class="counter-inner-shadow"></div>
+                  </div>
+               </div>
+               <div class="game-startscreen">
+                  <div class="title-container">
+                     <h3>Welcome to</h3>
+                     <img src="images/minesweeper-transparent.png" class="minesweeper-logo" />
+                  </div>
+                  <div id="game-start-controls">
+                     <div class="difficulty-selectors">
+                        <input type="radio" name="difficulty-selector-radio" value="10" />
+                        <input type="radio" name="difficulty-selector-radio" value="16" />
+                        <input type="radio" name="difficulty-selector-radio" value="20" />
+                        <div class="difficulty-selector-square"></div>
+                     </div>
+                     <div class="primary-title-buttons">
+                        <button class="btn btn-sec" id="stats-btn">Stats</button>
+                        <button class="btn btn-pri" id="new-game-btn">New Game</button>
+                     </div>
+                     <div class="mode-selectors">
+                        <div class="mode-selector-container">
+                           <h4 style="font-weight: 400;">Fences</h4>
+                           <input class="toggle" type="checkbox" id="fence-mode-selector" name="fence-mode-selector" />
+                        </div>
+                        <div class="mode-selector-container">
+                           <h4 style="font-weight: 400;">Unstable mines</h4>
+                           <input class="toggle" type="checkbox" id="unstable-mines-mode-selector" name="unstable-mines-mode-selector" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- <div class="game-over-text-container">
+                  <h1 class="game-over-text">GAME OVER</h1>
+               </div> -->
+               <!-- game squares go here -->
+               <!-- <div class="square"></div> -->
+               <div class="lower-bar">
+                  <div class="instructions-container">
+                     <div class="instruction" id="square-instruction">
+                        <p><span class="gradient-text">Step on square - </span><kbd>Left Click</kbd></p>
+                     </div>
+                     <hr>
+                     <div class="instruction" id="flag-instruction">
+                        <p><span class="gradient-text">Flag - </span><kbd>Right Click</kbd></p>
+                     </div>
+                     <hr>
+                     <div class="instruction" id="fence-instruction">
+                        <p><span class="gradient-text">Fence - </span><kbd>Space</kbd> + <kbd>Left Click</kbd></p>
+                     </div>
+                  </div>
+                  <h2 class="game-won-text">GAME WON</h2>
+                  <h2 class="game-over-text">GAME OVER</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+         <img src="images/question-mark.svg" alt="help" id="help-icon" />
+         <div id="off-viewport-event-marker"></div>
+      </div>
+      <dialog class="modal" id="help-modal">
+         <div id="help-modal-content">
+            <h2>Help</h2>
+            TODO
+         </div>
+         <div class="modal-controls">
+            <button class="btn" id="help-modal-close-btn">close modal</button>
+         </div>
+      </dialog>
+   </body>
+</html>
